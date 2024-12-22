@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.MainPage"
+             Title="Крестики-Нолики">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+
+        </Grid.ColumnDefinitions>
+
+        <StackLayout x:Name="Buttons" Grid.Row="0" Grid.Column="1" Padding="10" Spacing="5" Orientation="Vertical">
+
+            <Button x:Name="ButtonSide" Text="Текущая сторона - Х" Grid.Row="0" Grid.Column="0" HeightRequest="50" Clicked="OnCounterClicked" />
+            <Button x:Name="ButtonDifficulty" Text="Текущая сложность - Легко" WidthRequest="250" HeightRequest="50" Clicked="OnCounterClicked" />
+            <Button x:Name="ButtonTypeOfBots" Text="Текущий режим - Ручной" WidthRequest="250" HeightRequest="50" Clicked="OnCounterClicked" />
+            <Button x:Name="ButtonStart" Text="Начать" Grid.Row="2" Grid.Column="0" HeightRequest="50" Clicked="OnCounterClicked" />
+
+        </StackLayout>
+
+        <Grid x:Name="Game" Grid.Row="0" Grid.Column="0" Padding="10">
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="150" />
+                <RowDefinition Height="150" />
+                <RowDefinition Height="150" />
+
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="150" />
+
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Row="0" Grid.Column="0" Clicked="OnCellClicked" />
+            <Button Grid.Row="0" Grid.Column="1" Clicked="OnCellClicked" />
+            <Button Grid.Row="0" Grid.Column="2" Clicked="OnCellClicked" />
+            <Button Grid.Row="1" Grid.Column="0" Clicked="OnCellClicked" />
+            <Button Grid.Row="1" Grid.Column="1" Clicked="OnCellClicked" />
+            <Button Grid.Row="1" Grid.Column="2" Clicked="OnCellClicked" />
+            <Button Grid.Row="2" Grid.Column="0" Clicked="OnCellClicked" />
+            <Button Grid.Row="2" Grid.Column="1" Clicked="OnCellClicked" />
+            <Button Grid.Row="2" Grid.Column="2" Clicked="OnCellClicked" />
+        </Grid>
+    </Grid>
+
+
+</ContentPage>
